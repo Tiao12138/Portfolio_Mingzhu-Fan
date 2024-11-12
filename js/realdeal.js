@@ -29,12 +29,26 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         navContainer.innerHTML = data;  
         applyHoverTextListeners();      
-        applyImageClickListeners();    
+        applyImageClickListeners();
+  
+        const backToTopButton = document.getElementById("backToTop");
+        if (backToTopButton) {
+          window.onscroll = function () {
+            if (document.documentElement.scrollTop > 200) {
+              backToTopButton.style.display = "block";
+            } else {
+              backToTopButton.style.display = "none";
+            }
+          };
+  
+          backToTopButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
       })
       .catch(error => console.error('Error loading content:', error));
-  }
+  }   
 
-  // Handle image clicks for loading different content
   function applyImageClickListeners() {
     document.querySelectorAll('img.cover').forEach(cover => {
       cover.addEventListener('click', function () {
@@ -61,7 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (contentUrl2) {
       loadContent(contentUrl2); 
+
+      window.onscroll = function () {
+        const backToTopButton = document.getElementById("backToTop");
+        if (document.documentElement.scrollTop > 200) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+  
+      document.getElementById("backToTop")?.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     }
+  
+
     if (contentUrl2 === 'p2-1.html') {
       loadScrollScript();  
     }
@@ -150,7 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
  
 
-  // Hover text functionality
   function applyHoverTextListeners() {
     const images = document.querySelectorAll('.cover');
     images.forEach(img => {
