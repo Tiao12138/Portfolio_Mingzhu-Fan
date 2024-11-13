@@ -320,4 +320,6 @@ img.cards{
     border-radius: 50%; 
 }
 
- 
+ #backToTop:hover {
+    opacity: 0.6;
+}
