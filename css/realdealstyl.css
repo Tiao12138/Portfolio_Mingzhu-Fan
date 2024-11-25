@@ -1,6 +1,6 @@
 html {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-size: 12px;
+  font-size: 0.8vw;
   font-family: 'Jost', sans-serif;
   /* font-weight: 200; */
 }
@@ -10,13 +10,13 @@ p{
 }
 
 .large1{
-  font-size: 1.75rem;
+  font-size: 1.4vw;
   color: #444444;
 }
 
 .large2{
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
+  font-size: 1vw;
+  margin-bottom: 0.2vw;
   color: #444444;
 }
 
@@ -25,31 +25,31 @@ p{
   flex-direction: column;
   color: #444444;
   /* width: 25%; */
-  padding: 1.25rem;
-  margin-left: 1.25rem;
-  margin-bottom: 0.25rem;
+  padding: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 0.2vw;
   text-align: left;
   /* display: flex; */
 }
 
 .category1{
-  padding-left: 2.5rem;
+  padding-left: 2vw;
   /* width: 25%; */
   color: #444444;
   /* margin-bottom: 5px; */
   line-height: 1.2;
   text-align: left;
-  font-size: 1.125rem;
+  font-size: 0.9vw;
   font-weight: 600;
 }
 
 .category4{
-  margin-bottom: 2rem;
+  margin-bottom: 1.6vw;
 }
 
  .separator {
   display: inline-block;
-  padding:0%;
+  padding: 0%;
   user-select: none;
   cursor: default ; 
   color: inherit; 
@@ -82,26 +82,25 @@ p{
 
 .contentsec {
   color: #444444;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 1.25rem;
-  margin-right: 1.875rem;
-  margin-left: 1rem;
-  margin-top: rem;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
+  margin-right: 1.5vw;
+  margin-left: 0.8vw;
   /* width:75%; */
   flex-grow: 1;
   /* background-color:rgb(245, 241, 238); */
   overflow: auto;
-  font-size: 1.125rem;
+  font-size: 0.9vw;
 }
 
 .category3 {
   display: flex;
   flex-direction: row;
   color: #444444;
-  padding: 1.25rem;
-  margin-left: 1.25rem;
-  margin-bottom: 0.25rem;
+  padding: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 0.2vw;
   text-align: left;
   height: auto;
 }
@@ -115,8 +114,8 @@ p{
   margin-top: 0px;
   width:28%;
   height: auto;
-  font-size: 1.125rem;
-  gap: 1.25rem;
+  font-size: 0.9vw;
+  gap: 1vw;
 }
 
 img.quetta1{
@@ -137,59 +136,56 @@ img.quetta3{
 }
 
 .note{
-  font-size: 0.875rem;
+  font-size: 0.7vw;
 }
 
 .intro{
-  padding-left: 0px;
-  padding-right: 40px;
-  margin-top: 0px;
-  margin-left: 2rem;
-  width:40%;
+  padding-left: 0;
+  padding-right: 2.7vw;
+  margin-top: 0;
+  margin-left: 1.6vw;
+  width: 40%;
   overflow: auto;
-  font-size: 1rem;
+  font-size: 0.8vw;
 
 }
 
 .profilecol{
-  margin-top: 2.5rem;
+  margin-top: 2vw;
   color: #444444;
   width: 24%;
-  padding-left: 0rem;
+  padding-left: 0;
   text-align: left;
-  font-size: 1rem;
-  /* overflow: hidden; */
+  font-size: 0.8vw;
 }
 
 .sidenote{
-  margin-top: 2.5rem;
+  margin-top: 2vw;
   color: #444444;
   width: 18%;
-  padding-left: 0rem;
+  padding-left: 0;
   text-align: left;
-  font-size: 1rem;
-  /* overflow: hidden; */
+  font-size: 0.8vw;
 }
 
 img.profile{
-  width: 20rem;
+  width: 16vw;
   height: auto;
 }
 
 img.present1{
   height: auto;
   width: 100%;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.5vw;
 }
 
 .presenttext{
   margin-top: 0px;
   color: #444444;
   width: 45%;
-  padding-left: 1.25rem;
+  padding-left: 1vw;
   text-align: left;
-  font-size: 1.125rem;
-  /* overflow: hidden; */
+  font-size: 0.9vw;
 }
 
 .piv {
@@ -206,13 +202,13 @@ img.present1{
 
 .row {
   display: flex;
-  justify-content: flex-start;  /* 保持水平间距 */
-  align-items: flex-start;  /* 图片顶部对齐 */
-  flex-wrap: wrap;  /* 如果内容溢出，自动换行 */
-  column-gap: 2.5%;  /* Horizontal spacing */
-  row-gap: 0rem; 
-  margin-top: 4rem;
-  margin-left: 1rem;
+  justify-content: flex-start;  
+  align-items: flex-start;  
+  flex-wrap: wrap;  
+  column-gap: 2.5%;  
+  row-gap: 0; 
+  margin-top: 3.2vw;
+  margin-left: 0.8vw;
 }
 
 .box {
@@ -220,12 +216,12 @@ img.present1{
   /* width: auto;  
   height: auto;   */
   display: inline-block;
-  margin-top: 0rem;
+  margin-top: 0;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;  
   max-width: 18%;  
-  max-height: 22rem; 
+  max-height: 17.6vw; 
 }
 
 .box2 {
@@ -238,38 +234,31 @@ img.present1{
   align-items: flex-start;
   overflow: hidden;  
   max-width: 12%;  
-  max-height: 23rem; 
+  max-height: 18.4vw; 
 }
 
 .hover-text-container {
   position: absolute;
-  margin-top: 1rem;  /* Adjust as needed */
-  /* margin-left: 1rem; */
-  padding: 1rem;
+  margin-top: 0.8vw;  
+  padding: 0.8vw;
   font-weight: 600;
   color: #444444;
-  visibility: hidden; /* Initially hidden */
+  visibility: hidden; 
   opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth transition */
+  transition: visibility 0s, opacity 0.3s ease-in-out; 
 }
 
 .hover-text-container.show {
-  visibility: visible; /* Show on hover */
+  visibility: visible; 
   opacity: 1;
 }
 
-/* img.cover {
-  max-width: 97%;
-  height: auto;
-  transition: filter 0.2s ease;
-} */
-
 img.cover {
-  max-width: 100%;  /* 宽度最大为容器宽度 */
-  max-height: 32rem;  /* 限制图片的最大高度 */
-  width: auto;  /* 宽度自适应，保持比例 */
-  height: auto;  /* 高度自适应，保持比例 */
-  object-fit: contain;  /* 确保图片完整展示，不裁剪 */
+  max-width: 100%;  
+  max-height: 25.6vw;  
+  width: auto;  
+  height: auto;  
+  object-fit: contain;  
   transition: filter 0.2s ease;
   cursor: pointer;
 }
@@ -279,7 +268,7 @@ img.cover:hover {
 }
 
 .img-description {
-  font-size: 1.125rem; 
+  font-size: 0.9vw; 
   margin-top: 0.25px;
   max-width: 90%;
 }
@@ -288,11 +277,11 @@ img.cover:hover {
   visibility: hidden;
   opacity: 0;
   color: #666666;
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
+  font-size: 0.9vw;
+  margin-top: 0.9vw;
   position: relative;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 0.8vw;
 }
 
 img.cover:hover .hovertext {
@@ -313,7 +302,7 @@ img.cover:hover .hovertext {
       flex: 1 0 50%; 
   }
   .image-description {
-    font-size: 0.875rem; 
+    font-size: 0.7vw; 
 }
 }
 
