@@ -12,17 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let contentUrl = '';
       switch (contentNav) {
-        case 'p1': contentUrl = 'p1.html'; break;
+        // case 'p1': contentUrl = 'p1.html'; break;
         case 'p2': contentUrl = 'p2.html'; break;
-        case 'p3': contentUrl = 'p3.html'; break;
+        // case 'p3': contentUrl = 'p3.html'; break;
         default: contentUrl = 'p2.html';
       }
       
-      loadContent(contentUrl);  // Load the selected content
+      loadContent(contentUrl);  
     });
   });
   
-  // Function to load content into navContainer
   function loadContent(contentUrl) {
     fetch(contentUrl)
       .then(response => response.text())
@@ -30,8 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
         navContainer.innerHTML = data;  
         applyHoverTextListeners();      
         applyImageClickListeners();
+
+        if (contentUrl === 'p2-2.html') {
+          initializeAccordion();
+          showclickme()
+        }
+
+        if (contentUrl === 'p2-1.html' || contentUrl === 'p2-5.html'|| contentUrl === 'p2-3.html') {
+          initializeAccordion();
+        }
   
-        const backToTopButton = document.getElementById("backToTop");
+      const backToTopButton = document.getElementById("backToTop");
         if (backToTopButton) {
           window.onscroll = function () {
             if (document.documentElement.scrollTop > 200) {
@@ -75,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (contentUrl2) {
       loadContent(contentUrl2); 
+      toggleContent()
+      showclickme()
 
       window.onscroll = function () {
         const backToTopButton = document.getElementById("backToTop");
@@ -89,16 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     }
-  
 
     if (contentUrl2 === 'p2-1.html') {
       loadScrollScript();  
     }
     if(contentUrl2 === 'p2-2.html'){
-      showaccordion();
+      toggleContent()
+      showclickme()
     }
-    if(contentUrl2 === 'p2-3.html'){
-      showaccordion();
+    if(contentUrl2 === 'p2-1.html' || contentUrl2 === 'p2-5.html'|| contentUrl2 === 'p2-3.html'){
+      toggleContent()
+      showclickme()
     }
   }
 
@@ -152,32 +163,55 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script); 
   }
 
-  function showaccordion() {
-    const script = document.createElement('script');
-    script.src = 'js/p2-2.js';
-    script.onload = () => {
-        console.log('Script2 loaded successfully.');
-        document.querySelectorAll('.accordion-title').forEach(title => {
-            title.addEventListener('click', () => {
-                const targetId = title.getAttribute('data-target');
-                console.log('Title clicked');
-                const content = document.getElementById(targetId);
-                console.log('Content element retrieved');
-
-                // Use window.getComputedStyle to check the actual display property
-                const contentDisplay = window.getComputedStyle(content).display;
-
-                if (contentDisplay === "none") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        });
-    };
-    document.body.appendChild(script);
+  function showclickme(){
+    const col01 = document.querySelector('.col01');
+    const hoverText = document.getElementById('hover-text');
+    col01.addEventListener('mousemove', (event) => {
+        const rect = col01.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;  
+    
+        if (x < rect.width * 0.68 && !event.target.closest('.icon')) {
+            hoverText.style.display = 'block';
+            hoverText.style.left = `${event.clientX}px`;
+            hoverText.style.top = `${event.clientY}px`;
+            hoverText.textContent = 'click to experience';
+              col01.addEventListener('click', () => {
+              const externalURL = 'https://tiao12138.github.io/The_Bedroom/';
+              window.location.href = externalURL; 
+          });
+        } else {
+            hoverText.style.display = 'none';
+        }
+    });
+    
+    col01.addEventListener('mouseleave', () => {
+        hoverText.style.display = 'none';
+    });
   }
+  
  
+  function initializeAccordion() {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', function () {
+        const item = this.parentElement;
+        const content = item.querySelector('.accordion-content');
+        const icon = this.querySelector('.icon-arrow');
+  
+        const isOpen = item.classList.contains('open');
+        if (isOpen) {
+          item.classList.remove('open');
+          icon.textContent = '▼';
+          content.style.maxHeight = null; 
+        } else {
+          item.classList.add('open');
+          icon.textContent = '▲';
+          content.style.maxHeight = content.scrollHeight + "px"; 
+        }
+      });
+    });
+  }
+  
 
   function applyHoverTextListeners() {
     const images = document.querySelectorAll('.cover');
@@ -205,5 +239,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   applyHoverTextListeners();
   applyImageClickListeners();
+
 
 });
