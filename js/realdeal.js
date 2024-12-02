@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;  
     
-        if (x < rect.width * 0.68 && !event.target.closest('.icon')) {
+        if (x < rect.width * 0.75 && !event.target.closest('.icon')) {
             hoverText.style.display = 'block';
             hoverText.style.left = `${event.clientX}px`;
             hoverText.style.top = `${event.clientY}px`;
