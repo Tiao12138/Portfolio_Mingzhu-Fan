@@ -267,37 +267,58 @@ img.zoomsize2{
     cursor: url('magnifier-out-icon.png'), auto; 
 }
 
-.accordion-content {
-    display: none;
+.accordion{
+    width: 70vw;
 }
 
-.accordion-title {
-    cursor: pointer;
+.accordion-header {
     font-weight: bold;
-}
-
-.accordion-title:hover {
-    color: #E2DFD8;
-}
-
-/* .accordion-content {
-    display: none; 
-    padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-}
-
-.accordion-title {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
     cursor: pointer;
-    padding: 10px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
 }
 
-.accordion-title:hover {
-    background-color: #ccc;
-} */
+.accordion-header:hover {
+    color: #7176D2;
+}
+  
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
 
+.accordion-item {
+    margin: 0.5vh 0;
+}  
+
+.accordion-title{
+    font-style: italic;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666666;
+}
+  
+.icon-arrow {
+    font-size: 1.15rem;
+    user-select: none;
+    color: #666666;
+    margin-left: 0.5vw;
+}
+
+.icon-arrow:hover {
+    color: #b8bae0;
+}
+  
+.accordion-item.open .accordion-content {
+    max-height: 100px; 
+}
+  
+.accordion-item.open .icon-arrow {
+    content: "▲";
+}
 img.nuuk {
     width: 21vw;
     height: 28vw;
@@ -305,7 +326,7 @@ img.nuuk {
 }
 
 img.cards{
-    width: 15vw;
+    width: 17vw;
     height: auto;
 }
 
