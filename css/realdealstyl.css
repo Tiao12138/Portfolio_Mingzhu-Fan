@@ -247,6 +247,12 @@ img.present1{
   overflow: hidden;
 }
 
+.graphic1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hover-text-container {
   position: absolute;
   margin-top: 1rem;  /* Adjust as needed */
