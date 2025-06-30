@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case 'p2-8': contentUrl2 = 'p2-8.html'; break;
       case 'p2-9': contentUrl2 = 'p2-9.html'; break;
       case 'p2-10': contentUrl2 = 'p2-10.html'; break;
+      case 'p2-11': contentUrl2 = 'p2-10.html'; break;
       default: contentUrl2 = 'p2.html';
     }
 
