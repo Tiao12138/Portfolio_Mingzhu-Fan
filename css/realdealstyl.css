@@ -242,16 +242,7 @@ img.present1{
 }
 
 .graphic1 {
-  display: inline-block;
-  vertical-align: top;
   width: 20rem;
-  height: auto;
-  margin-top: 0rem;
-  overflow: hidden;  
-}
-
-.graphic1 img {
-  width: 100%;
   height: auto;
   display: block;
 }
