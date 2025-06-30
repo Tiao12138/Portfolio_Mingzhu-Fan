@@ -78,9 +78,10 @@ img.col1pic{
 }
 
 .graphic1 {
-  width: 20rem;
-  height: auto;
-  display: block;
+  width: 20rem;       /* 固定宽度 */
+  height: auto;       /* 高度自动，防止变形 */
+  display: block;     /* 避免 inline 元素带来的对齐问题 */
+  flex-shrink: 0;     /* 防止 Flexbox 缩小它 */
 }
 
 .col5{
