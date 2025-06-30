@@ -243,15 +243,13 @@ img.present1{
 
 .graphic1 {
   flex: 1 1 auto; 
-  /* width: auto;  
-  height: auto;   */
+  width: 20rem;
+  height: auto;
   display: inline-block;
   margin-top: 0rem;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;  
-  max-width: 18%;  
-  max-height: 22rem; 
 }
 
 .hover-text-container {
